@@ -8,5 +8,5 @@ export const FACEBOOK_URL = "https://www.facebook.com/thisisumbreen";
 export const FOUNDATION_URL = "#";
 export const EZPA_URL = "#";
 export const PRESS_URL = "/#press"; // TODO: point to the Press page once it exists
-export const LINKEDIN_URL = "#"; // TODO: add Umbreen's LinkedIn profile URL
+export const LINKEDIN_URL = "http://linkedin.com/in/thisisumbreen"; // TODO: add Umbreen's LinkedIn profile URL
 export const ADDRESS = ["418 Broadway, STE N", "Albany, NY 12207, USA"] as const;
