@@ -3,7 +3,7 @@ export const EMBROWERMENT_URL = "https://embrowerment.com";
 export const WINK_URL = "https://www.winkbrowbar.com";
 export const INSTAGRAM_URL = "https://www.instagram.com/thisisumbreen";
 export const YOUTUBE_URL = "https://www.youtube.com/@thisisumbreen";
-export const FACEBOOK_URL = "https://www.facebook.com/thisisumbreen";
+export const FACEBOOK_URL = "https://www.facebook.com/share/1EwqjLEpA4/?mibextid=wwXIfr";
 // TODO: replace with the real URLs once available
 export const FOUNDATION_URL = "#";
 export const EZPA_URL = "#";

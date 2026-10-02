@@ -34,8 +34,8 @@ const services = [
   ["Signature Service", "Signature Brow Threading", "Certified organic cotton thread removes hair gently from the root for precise shaping. Includes consultation, brow mapping, and a complimentary fill."],
   ["Brow Shaping", "Brow Wax", "All-natural chocolate wax removes hair from the root for sculpted arches that last three to six weeks. Includes consultation, brow mapping, and a complimentary fill."],
   ["Brow Treatment", "Brow Lamination", "A three-step keratin treatment that lifts and sets the brow hair for a fuller, bolder shape lasting six to eight weeks with proper aftercare."],
-  ["Embrowerment® Semi-Permanent Makeup", "Microblading", "A semi-permanent pigment deposited into the skin with fine, hair-like strokes using a handheld tool. A follow-up at six weeks is included in the fee."],
-  ["Embrowerment® Semi-Permanent Makeup", "Nanoblading", "A fine-needle technique within the Embrowerment® family, designed for precise, natural-looking hair-like strokes. A six-week follow-up is included."],
+  // hidden: ["Embrowerment® Semi-Permanent Makeup", "Microblading", "A semi-permanent pigment deposited into the skin with fine, hair-like strokes using a handheld tool. A follow-up at six weeks is included in the fee."],
+  // hidden: ["Embrowerment® Semi-Permanent Makeup", "Nanoblading", "A fine-needle technique within the Embrowerment® family, designed for precise, natural-looking hair-like strokes. A six-week follow-up is included."],
   ["Embrowerment® Semi-Permanent Makeup", "Ombre | Powder Brows", "Pigment is stippled into the brow with a tattoo machine for a soft, airy, makeup-filled effect. A six-week follow-up is included."],
 ] as const;
 
@@ -58,7 +58,7 @@ function Services() {
 
     {/* Hero */}
     <header className="svc-head">
-      <div className="svc-head-top"><span className="pillars-kicker">Brow Artist · New York City</span><span className="svc-head-idx">Services · 06 Treatments</span></div>
+      <div className="svc-head-top"><span className="pillars-kicker">Brow Artist · New York City</span><span className="svc-head-idx">Services · 04 Treatments</span></div>
       <h1 className="display">Umbreen, Brow Artist &amp; Eye Zone Expert in New York City</h1>
       <div className="svc-head-row">
         <p className="serif">Umbreen is a licensed brow artist in NYC who shapes brows around each client's natural bone structure, not a one-size-fits-all template. At her Atelier — her personal brow artist studio — she offers signature brow threading, waxing, and lamination, using her Embrowerment® Method across every service.</p>

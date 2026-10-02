@@ -15,6 +15,8 @@ import { Route as DraftHomeRouteImport } from './routes/draft-home'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TermsOfServiceRouteImport } from './routes/terms-of-service'
+import { Route as ServiceEyebrowLaminationRouteImport } from './routes/service/eyebrow-lamination'
+import { Route as ServiceSignatureBrowThreadingRouteImport } from './routes/service/signature-brow-threading'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +48,18 @@ const TermsOfServiceRoute = TermsOfServiceRouteImport.update({
   path: '/terms-of-service',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServiceEyebrowLaminationRoute =
+  ServiceEyebrowLaminationRouteImport.update({
+    id: '/service/eyebrow-lamination',
+    path: '/service/eyebrow-lamination',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServiceSignatureBrowThreadingRoute =
+  ServiceSignatureBrowThreadingRouteImport.update({
+    id: '/service/signature-brow-threading',
+    path: '/service/signature-brow-threading',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +68,8 @@ export interface FileRoutesByFullPath {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/service/eyebrow-lamination': typeof ServiceEyebrowLaminationRoute
+  '/service/signature-brow-threading': typeof ServiceSignatureBrowThreadingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +78,8 @@ export interface FileRoutesByTo {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/service/eyebrow-lamination': typeof ServiceEyebrowLaminationRoute
+  '/service/signature-brow-threading': typeof ServiceSignatureBrowThreadingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +89,8 @@ export interface FileRoutesById {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
   '/terms-of-service': typeof TermsOfServiceRoute
+  '/service/eyebrow-lamination': typeof ServiceEyebrowLaminationRoute
+  '/service/signature-brow-threading': typeof ServiceSignatureBrowThreadingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +101,8 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/services'
     | '/terms-of-service'
+    | '/service/eyebrow-lamination'
+    | '/service/signature-brow-threading'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +111,8 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/services'
     | '/terms-of-service'
+    | '/service/eyebrow-lamination'
+    | '/service/signature-brow-threading'
   id:
     | '__root__'
     | '/'
@@ -97,6 +121,8 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/services'
     | '/terms-of-service'
+    | '/service/eyebrow-lamination'
+    | '/service/signature-brow-threading'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -106,6 +132,8 @@ export interface RootRouteChildren {
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ServicesRoute: typeof ServicesRoute
   TermsOfServiceRoute: typeof TermsOfServiceRoute
+  ServiceEyebrowLaminationRoute: typeof ServiceEyebrowLaminationRoute
+  ServiceSignatureBrowThreadingRoute: typeof ServiceSignatureBrowThreadingRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -152,6 +180,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsOfServiceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/service/eyebrow-lamination': {
+      id: '/service/eyebrow-lamination'
+      path: '/service/eyebrow-lamination'
+      fullPath: '/service/eyebrow-lamination'
+      preLoaderRoute: typeof ServiceEyebrowLaminationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/service/signature-brow-threading': {
+      id: '/service/signature-brow-threading'
+      path: '/service/signature-brow-threading'
+      fullPath: '/service/signature-brow-threading'
+      preLoaderRoute: typeof ServiceSignatureBrowThreadingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -162,6 +204,8 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   ServicesRoute: ServicesRoute,
   TermsOfServiceRoute: TermsOfServiceRoute,
+  ServiceEyebrowLaminationRoute: ServiceEyebrowLaminationRoute,
+  ServiceSignatureBrowThreadingRoute: ServiceSignatureBrowThreadingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

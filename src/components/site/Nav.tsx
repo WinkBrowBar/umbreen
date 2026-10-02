@@ -6,13 +6,18 @@ import { SocialIcon } from "./SocialIcons";
 const logo = { url: "/images/umbreen-00.png" };
 
 const links = [
-  { label: "About", to: "/about" },
+ 
   { label: "Expertise", href: "/#expertise" },
-  { label: "Services", to: "/services" },
+
   { label: "Embrowerment®", href: "/#method" },
   { label: "Ventures", href: "/#ventures" },
   { label: "Press", href: "/#press" },
   { label: "EZPA", href: "/#ezpa" },
+    { label: "Services", to: "/services", children: [
+    { label: "Signature Brow Threading", to: "/service/signature-brow-threading" },
+    { label: "Brow Lamination", to: "/service/eyebrow-lamination" },
+  ] },
+   { label: "About", to: "/about" },
 ] as const;
 
 export function Nav() {
@@ -39,7 +44,12 @@ export function Nav() {
       {open ? "Close" : "Menu"}
     </button>
     <div className="navlinks" id="site-menu">
-      {links.map(l => "to" in l
+      {links.map(l => "children" in l
+        ? <div key={l.label} className="nav-drop">
+            <Link to={l.to} onClick={close} className="nav-drop-trigger" aria-haspopup="true">{l.label.toUpperCase()}<svg viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.3" /></svg></Link>
+            <div className="nav-drop-menu">{l.children.map(c => <Link key={c.label} to={c.to} onClick={close}>{c.label}</Link>)}</div>
+          </div>
+        : "to" in l
         ? <Link key={l.label} to={l.to} onClick={close}>{l.label.toUpperCase()}</Link>
         : <a key={l.label} href={l.href} onClick={close}>{l.label.toUpperCase()}</a>)}
       <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="nav-book" onClick={close}>BOOK</a>
