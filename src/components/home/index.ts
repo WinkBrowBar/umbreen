@@ -1,0 +1,13 @@
+export { HomeHero } from "./HomeHero";
+export { Featured } from "./Featured";
+export { About } from "./About";
+export { Method } from "./Method";
+export { Services } from "./Services";
+export { GoodCompany } from "./GoodCompany";
+export { PressLogos } from "./PressLogos";
+export { Founder } from "./Founder";
+export { Ventures } from "./Ventures";
+export { Instagram } from "./Instagram";
+export { FindUmbreen } from "./FindUmbreen";
+export { Faq, faqs } from "./Faq";
+export { FinalCta } from "./FinalCta";
