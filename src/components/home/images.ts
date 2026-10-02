@@ -15,8 +15,7 @@ export const homeImages = {
   aprilLong: null as string | null,
   christeneBarberich: null as string | null,
   dianeVonFurstenberg: null as string | null,
-  ventureWink: null as string | null,                            // Wink Brow Bar studio
-  ventureEmbrowerment: null as string | null,                    // Embrowerment® education / products
+  ventureWink: "https://embrowerment-website-videos.s3.eu-north-1.amazonaws.com/Image_20261002_161214+(1).jpg" as string | null,    ventureEmbrowerment: null as string | null,                    // Embrowerment® education / products
   ventureFoundation: null as string | null,                      // Embrowerment Foundation
   ventureEzpa: null as string | null,                            // EZPA
   instagram: [null, null, null, null, null, null] as (string | null)[], // 6 Instagram posts
