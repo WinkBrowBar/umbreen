@@ -1,6 +1,7 @@
 import { seo } from "@/lib/seo";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav, Footer, PageHead } from "@/components/site";
+import { BOOKING_URL } from "@/lib/links";
 
 const portrait = { url: "/images/umbreen-02.png" };
 const session = { url: "/images/umbreen-03.jpeg" };
@@ -42,7 +43,12 @@ function About() {
       </div>
     </section>
     <section className="motion"><div className="motion-frame"><img src={session.url} alt="Umbreen Sheikh at work" loading="lazy" /><div className="motion-tag">WINK BROW BAR · NEW YORK</div><div className="motion-caption"><div><h3 className="serif">Intention over impulse.</h3><p>EXPERTISE OVER VOLUME</p></div></div></div></section>
-    <section className="declare"><h2 className="display">To guide,<br />not <em>override</em>.</h2><p className="sub">Concierge 646.846.5041 · Monday–Sunday, 2:00–7:00 PM EST. For press, media and appointments: hello@umbreen.com</p></section>
+    <section className="declare"><h2 className="display">To guide,<br />not <em>override</em>.</h2><p className="sub">Concierge 646.846.5041 · Monday–Sunday, 2:00–7:00 PM EST. For press, media and appointments: hello@umbreen.com</p>
+      <div className="about-ctas">
+        <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="svc-cta-btn">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+        <Link to="/services" hash="pricing" className="svc-link svc-link--light">SEE FULL MENU OF SERVICES <span aria-hidden="true">→</span></Link>
+      </div>
+    </section>
     <Footer />
   </main>;
 }

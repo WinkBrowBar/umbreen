@@ -29,7 +29,7 @@ export function About() {
         {credentials.map(([t, d]) => <div key={d}><dt>{t}</dt><dd>{d}</dd></div>)}
       </dl>
       <div className="v2-actions">
-        <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="v2-btn">Book a Appointment <span aria-hidden="true">→</span></a>
+        <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="v2-btn">Book a Consultation <span aria-hidden="true">→</span></a>
         <Link to="/about" className="v2-link">Explore her expertise <span aria-hidden="true">→</span></Link>
       </div>
     </div>

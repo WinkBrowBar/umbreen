@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav, Footer } from "@/components/site";
-import { BOOKING_URL } from "@/lib/links";
+import { BOOKING_URL, WINK_URL } from "@/lib/links";
 import { seo } from "@/lib/seo";
 
 const heroImg = "/images/umbreen-01.jpeg";
@@ -42,22 +42,22 @@ const services = [
 ] as const;
 
 const menu = [
-  ["Virtual Google Meet Consultation", "", "$150"],
-  ["Signature Embrowerment® Thread", "Brow Threading", "$88"],
-  ["Signature Embrowerment® Tweeze", "Brow Tweeze", "$82"],
-  ["Signature Embrowerment® Wax", "Brow Wax", "$82"],
-  ["Embrowerment® Tint", "Brow Tint", "$52"],
-  ["Embrowerment® Lift", "Brow Lamination", "$139"],
-  ["Embrowerment® Lash Elevation", "Lash Lift", "$165"],
-  ["Embrowerment® Precision Duo", "Brow Threading and Upper Lip Thread", "$93"],
-  ["Embrowerment® Detail and Define", "Tweeze and Brow Tint", "$118"],
-  ["Embrowerment® Sculpt and Define", "Brow Thread and Brow Tint", "$124"],
-  ["Embrowerment® Wax and Define", "Brow Wax and Brow Tint", "$118"],
-  ["Embrowerment® Lift and Sculpt", "Brow Lamination and Shape", "$155"],
-  ["Embrowerment® Lift, Sculpt and Define", "Brow Lamination, Tint and Shape", "$185"],
-  ["Embrowerment® Eye Elevation", "Brow Lamination and Lash Lift", "$227"],
-  ["Embrowerment® Signature Eye Lift", "Brow Lamination, Brow Tint and Lash Lift", "$309"],
-  ["Embrowerment® Ultimate Eye Transformation", "Brow Lamination, Brow Tint, Lash Lift and Lash Tint", "$340"],
+  ["Virtual Google Meet Consultation", "", "$150", "A one-on-one video consultation with Umbreen to assess your brows and eye zone, talk through your goals and map out a personalized plan before you book in studio."],
+  ["Signature Embrowerment® Thread", "Brow Threading", "$88", "Precision brow shaping with certified organic cotton thread, beginning with an assessment of your natural brow and facial structure. Includes consultation, brow mapping and a complimentary fill."],
+  ["Signature Embrowerment® Tweeze", "Brow Tweeze", "$82", "Hair-by-hair shaping with tweezers, ideal for fine-tuning the brow line or for clients who prefer tweezing to threading or waxing."],
+  ["Signature Embrowerment® Wax", "Brow Wax", "$82", "All-natural chocolate wax removes hair from the root for sculpted arches. Includes consultation, brow mapping and a complimentary fill."],
+  ["Embrowerment® Tint", "Brow Tint", "$52", "A custom-matched tint that adds depth and definition to your natural brow hair so brows look fuller and more polished."],
+  ["Embrowerment® Lift", "Brow Lamination", "$139", "A three-step keratin treatment that lifts and sets the brow hair for a fuller, bolder shape lasting six to eight weeks with proper aftercare."],
+  ["Embrowerment® Lash Elevation", "Lash Lift", "$165", "A lash lift that curls and lifts your natural lashes from the root for a brighter, more open eye, with no extensions needed."],
+  ["Embrowerment® Precision Duo", "Brow Threading and Upper Lip Thread", "$93", "Signature brow threading paired with an upper lip thread in one appointment."],
+  ["Embrowerment® Detail and Define", "Tweeze and Brow Tint", "$118", "Brow tweezing finished with a custom tint for a clean shape and added definition."],
+  ["Embrowerment® Sculpt and Define", "Brow Thread and Brow Tint", "$124", "Signature brow threading finished with a custom tint for a sculpted, defined brow."],
+  ["Embrowerment® Wax and Define", "Brow Wax and Brow Tint", "$118", "A brow wax finished with a custom tint for a clean shape and richer color."],
+  ["Embrowerment® Lift and Sculpt", "Brow Lamination and Shape", "$155", "Brow lamination with signature shaping to lift, set and refine the brow."],
+  ["Embrowerment® Lift, Sculpt and Define", "Brow Lamination, Tint and Shape", "$185", "Brow lamination, tint and shaping combined for a fuller, defined, face-framing finish."],
+  ["Embrowerment® Eye Elevation", "Brow Lamination and Lash Lift", "$227", "Brow lamination and a lash lift together, lifting both brows and lashes for an open, polished eye zone."],
+  ["Embrowerment® Signature Eye Lift", "Brow Lamination, Brow Tint and Lash Lift", "$309", "Brow lamination, brow tint and a lash lift in one appointment for a complete eye-zone refresh."],
+  ["Embrowerment® Ultimate Eye Transformation", "Brow Lamination, Brow Tint, Lash Lift and Lash Tint", "$340", "The full eye-zone treatment: brow lamination, brow tint, lash lift and lash tint for maximum lift, definition and depth."],
 ] as const;
 
 const studios = [
@@ -84,8 +84,8 @@ function Services() {
       <div className="svc-head-row">
         <p className="serif">Umbreen is a licensed brow artist in NYC who shapes brows around each client's natural bone structure, not a one-size-fits-all template. At her Atelier — her personal brow artist studio — she offers signature brow threading, waxing, and lamination, using her Embrowerment® Method across every service.</p>
         <div className="svc-actions">
-          <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="strip-book">BOOK A APPOINTMENT <span aria-hidden="true">→</span></a>
-          <a href="#services" className="svc-link">SEE SERVICES</a>
+          <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="strip-book">BOOK A CONSULTATION <span aria-hidden="true">→</span></a>
+          <a href="#pricing" className="svc-link">SEE SERVICES</a>
         </div>
       </div>
       <div className="svc-triptych">
@@ -130,7 +130,7 @@ function Services() {
     {/* Services */}
     <section className="svc-list" id="services">
       <span className="pillars-kicker">Services</span>
-      <h2 className="display">Umbreen's Signature Brow Services</h2>
+      <h2 className="display">Umbreen's Most Popular Brow Services</h2>
       <p className="svc-intro">As an eyebrow specialist in NYC, Umbreen applies the Embrowerment® Method across every service, including precision shaping and semi-permanent brow artistry.</p>
       <div className="svc-grid">
         {services.map(([cat, title, desc], i) => <article className="svc-card" key={title}>
@@ -148,9 +148,14 @@ function Services() {
       <span className="pillars-kicker">Menu &amp; Pricing</span>
       <h2 className="display">Services &amp; Prices</h2>
       <ul className="svc-menu-list">
-        {menu.map(([name, what, price]) => <li key={name}>
-          <div><h3>{name}</h3>{what && <p>{what}</p>}</div>
-          <span className="svc-menu-price">{price}</span>
+        {menu.map(([name, what, price, desc]) => <li key={name}>
+          <details>
+            <summary>
+              <div><h3>{name}</h3>{what && <p>{what}</p>}</div>
+              <span className="svc-menu-price">{price}</span>
+            </summary>
+            <p className="svc-menu-desc">{desc}</p>
+          </details>
         </li>)}
       </ul>
       <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="strip-book svc-menu-book">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
@@ -163,8 +168,9 @@ function Services() {
         <div>
           <h3 className="serif">Find Umbreen in New York City</h3>
           <p className="svc-studio-text">Umbreen has established herself as a brow expert in NYC through her work at Wink Brow Bar, her destination for elevated brow artistry since 2014. Here, brows become beauty architecture, and every technician is certified in the Embrowerment® Method.</p>
-          <div className="svc-studios">{studios.map(([n, a, c]) => <div key={n}><h4>{n}</h4><p>{a}<br />{c}</p></div>)}</div>
-          <a href="https://www.winkbrowbar.com" target="_blank" rel="noreferrer" className="svc-link svc-link--light">VISIT WINK BROW BAR</a>
+          <div className="svc-studios">{studios.map(([n, a, c]) => <div key={n}><h4>{n}</h4><p className="svc-studio-name">Embrowerment® Atelier</p><p>{a}<br />{c}</p></div>)}</div>
+          <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="strip-book svc-studio-book">BOOK AN APPOINTMENT <span aria-hidden="true">→</span></a>
+          <p className="svc-studio-inside">Located inside <a href={WINK_URL} target="_blank" rel="noreferrer">Wink Brow Bar</a></p>
         </div>
       </div>
     </div></section>
