@@ -1421,3 +1421,12 @@ html, body{ max-width:100%; }
   .foot-sig{ top:auto; bottom:70px; width:260px; opacity:.07; }
   .foot-grid .foot-note{ max-width:none; }
 }
+.sd-price-grid > .sd-price:only-child{ max-width:560px; }
+/* sticky header fix: "hidden" on body turned it into a scroll box, which stops sticky; "clip" doesn't */
+body{ overflow-x:clip; }
+
+/* service price cards: black */
+.sd-price{ background:#000; color:#fff; border-color:#000; }
+.sd-price h3, .sd-price .sd-amount, .sd-price p, .sd-price .v2-link{ color:#fff; }
+.sd-price p{ color:rgba(255,255,255,.72); }
+.sd-price .v2-link{ border-color:#fff; }

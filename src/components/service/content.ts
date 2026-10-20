@@ -42,11 +42,12 @@ export const threading: ServiceContent = {
     items: [
       { name: "Signature Embrowerment® Thread", price: "$88", desc: "Your appointment includes professional brow threading using Umbreen's signature Embrowerment® approach." },
     ],
-    offer: {
-      kicker: "New Client Offer",
-      title: "First Brow Shaping for $35",
-      lines: ["Available exclusively at the 244 E 60th Street location in Manhattan for a limited time.", "New clients only. Mention the offer when booking."],
-    },
+    // hidden: new client offer
+    // offer: {
+    //   kicker: "New Client Offer",
+    //   title: "First Brow Shaping for $35",
+    //   lines: ["Available exclusively at the 244 E 60th Street location in Manhattan for a limited time.", "New clients only. Mention the offer when booking."],
+    // },
   },
   who: {
     title: "Who is Eyebrow Threading For?",

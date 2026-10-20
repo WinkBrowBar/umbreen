@@ -96,7 +96,7 @@ export function ServiceDetail({ c }: { c: ServiceContent }) {
       <p>{c.cta.body}</p>
       <div className="v2-actions">
         <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="v2-btn v2-btn--light">Book an Appointment <span aria-hidden="true">→</span></a>
-        <Link to="/services" className="v2-link">See Full Menu <span aria-hidden="true">→</span></Link>
+        <Link to="/services" hash="pricing" className="v2-link">See Full Menu <span aria-hidden="true">→</span></Link>
       </div>
     </section>
 

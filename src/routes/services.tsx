@@ -38,7 +38,7 @@ const services = [
   ["Brow Treatment", "Brow Lamination", "A three-step keratin treatment that lifts and sets the brow hair for a fuller, bolder shape lasting six to eight weeks with proper aftercare."],
   // hidden: ["Embrowerment® Semi-Permanent Makeup", "Microblading", "A semi-permanent pigment deposited into the skin with fine, hair-like strokes using a handheld tool. A follow-up at six weeks is included in the fee."],
   // hidden: ["Embrowerment® Semi-Permanent Makeup", "Nanoblading", "A fine-needle technique within the Embrowerment® family, designed for precise, natural-looking hair-like strokes. A six-week follow-up is included."],
-  ["Embrowerment® Semi-Permanent Makeup", "Ombre | Powder Brows", "Pigment is stippled into the brow with a tattoo machine for a soft, airy, makeup-filled effect. A six-week follow-up is included."],
+  // hidden: ["Embrowerment® Semi-Permanent Makeup", "Ombre | Powder Brows", "Pigment is stippled into the brow with a tattoo machine for a soft, airy, makeup-filled effect. A six-week follow-up is included."],
 ] as const;
 
 const menu = [
@@ -79,12 +79,12 @@ function Services() {
 
     {/* Hero */}
     <header className="svc-head">
-      <div className="svc-head-top"><span className="pillars-kicker">Brow Artist · New York City</span><span className="svc-head-idx">Services · 04 Treatments</span></div>
+      <div className="svc-head-top"><span className="pillars-kicker">Brow Artist · New York City</span><span className="svc-head-idx">Services · 03 Treatments</span></div>
       <h1 className="display">Umbreen, Brow Artist &amp; Eye Zone Expert in New York City</h1>
       <div className="svc-head-row">
         <p className="serif">Umbreen is a licensed brow artist in NYC who shapes brows around each client's natural bone structure, not a one-size-fits-all template. At her Atelier — her personal brow artist studio — she offers signature brow threading, waxing, and lamination, using her Embrowerment® Method across every service.</p>
         <div className="svc-actions">
-          <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="strip-book">BOOK A CONSULTATION <span aria-hidden="true">→</span></a>
+          <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="strip-book">BOOK A APPOINTMENT <span aria-hidden="true">→</span></a>
           <a href="#services" className="svc-link">SEE SERVICES</a>
         </div>
       </div>
@@ -140,7 +140,7 @@ function Services() {
           <p>{desc}</p>
         </article>)}
       </div>
-      <p className="svc-note">All Embrowerment® Semi-Permanent Makeup services begin with a complimentary consultation, personally conducted by Umbreen, to assess candidacy and long-term outcomes.</p>
+      {/* hidden (no semi-permanent services listed): <p className="svc-note">All Embrowerment® Semi-Permanent Makeup services begin with a complimentary consultation, personally conducted by Umbreen, to assess candidacy and long-term outcomes.</p> */}
     </section>
 
     {/* Menu & pricing */}
