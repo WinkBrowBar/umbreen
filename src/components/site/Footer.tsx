@@ -30,6 +30,7 @@ export function Footer() {
         <ul className="foot-links">
           {explore.map(l => <li key={l.label}>{"to" in l ? <Link to={l.to}>{l.label}</Link> : <a href={l.href}>{l.label}</a>}</li>)}
           <li><a href={BOOKING_URL} target="_blank" rel="noreferrer">Book</a></li>
+          <li><Link to="/service-policies">Service Policies</Link></li>
         </ul>
       </div>
       <div>
