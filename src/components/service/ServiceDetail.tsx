@@ -33,7 +33,7 @@ export function serviceHead(c: ServiceContent, path: string) {
       url,
       description: s.description,
       provider: { "@id": SALON_ID },
-      areaServed: { "@type": "City", name: "Albany", containedInPlace: { "@type": "State", name: "New York" } },
+      areaServed: { "@type": "City", name: "New York City", containedInPlace: { "@type": "State", name: "New York" } },
       offers: { "@type": "Offer", url, price: s.price, priceCurrency: "USD", ...(s.inStock ? { availability: "https://schema.org/InStock" } : {}) },
     },
     // Built from the FAQs shown on the page so the two always match.
