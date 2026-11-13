@@ -2,7 +2,7 @@
 import { SITE_URL } from "./seo";
 
 export const PERSON_ID = `${SITE_URL}/#person`;
-export const SALON_ID = `${SITE_URL}/#albany-location`;
+export const SALON_ID = `${SITE_URL}/#nyc-location`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 
 const SAME_AS = [
@@ -32,10 +32,10 @@ export const salon = {
   founder: { "@id": PERSON_ID },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "418 Broadway, STE N",
-    addressLocality: "Albany",
+    streetAddress: "7 Greenwich Avenue",
+    addressLocality: "New York",
     addressRegion: "NY",
-    postalCode: "12207",
+    postalCode: "10014",
     addressCountry: "US",
   },
 };
